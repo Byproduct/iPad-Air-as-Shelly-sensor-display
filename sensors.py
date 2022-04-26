@@ -31,7 +31,7 @@ def fetch_data(sensor_id):
 
     time_data = str(device_data['data']['device_status']['_updated'])
     last_updated = datetime.strptime(time_data, time_format)
-    last_updated = last_updated + timedelta(hours=3)                                    # convert from GMT into Finnish time
+#    last_updated = last_updated + timedelta(hours=3)                                   # time in GMT by default, use this to convert to Finnish time or whatever
     last_updated = last_updated.time()                                                  # show hours only
 
     temperature = device_data['data']['device_status']['tmp']['value']
@@ -48,7 +48,7 @@ def fetch_data(sensor_id):
 #       "battery_status": str(battery_voltage) + "v (" + str(battery_percent) + "%)"
     }
 
-    print("...")            # progress indocator
+    print("...")            # progress indicator
     time.sleep(1.5)         # pause because Shelly api is limited to 1 request per second
     return sensor_info
 
