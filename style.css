@@ -1,0 +1,55 @@
+@font-face {
+	font-family: myriad;
+	src: url('MyriadProRegular.otf') format('opentype');
+}
+
+
+body {
+	max-width: 1000px;     /* iPad air landscape resolution */
+	font-family: myriad;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+p.time {
+	font-family: myriad;
+	text-align: center;
+	font-size: 600%;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+p.date {
+	font-family: myriad;
+	text-align: center;
+	font-size: 300%;
+	color: #FFFFFF;
+}
+
+
+td.sensor_name {
+	column-span: 2;
+    text-align: center;
+	font-size: 150%;
+	font-weight: bold;
+}
+
+td.sensor_temp {
+    text-align: center;
+	font-size: 400%;
+	color: #FF7777;
+	font-weight: bold;
+}
+
+td.sensor_hum {
+    text-align: center;
+	font-size: 300%;
+	color: #7777FF;
+	font-weight: bold;
+}
+
+td.small {
+    text-align: center;
+	font-size: 60%;
+	color: #AAAAAA;
+}

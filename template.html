@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="refresh" content="600" />
+<link href="style.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="startTime()">
+<div id = "txt" class="clock">
+<script>
+function startTime() {
+  const today = new Date();
+  let year = today.getFullYear();
+  let month = today.toLocaleString('default', { month: 'long' });
+  let day = today.getDate();
+  let dayname = today.toLocaleString('default', { weekday: 'long' });    
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = addLeadingZero(m);
+  s = addLeadingZero(s);
+
+  document.getElementById('txt').innerHTML = "<p class=\"time\">" + h + ":" + m + ":" + s + "</p><p class=\"date\">" + dayname + ", " + day + " " + month + " " + year ;
+  setTimeout(startTime, 1000);
+}
+function addLeadingZero(i) {
+  if (i < 10) {i = "0" + i};
+  return i;
+}
+</script>
+</div>
+<table style="width:100%">
+<tr>
+<td class="sensor_hum"> &nbsp; </td>   <!-- Just some spacing -->
+</tr>
+<tr><td class="sensor_name">sensor 1</td><td class="sensor_name">sensor 2</td><td class="sensor_name">sensor 3</td><td class="sensor_name">sensor 4</td><td class="sensor_name">sensor 5</td></tr>   <!-- Rename these accordingly. -->
+
+<tr>
+<td class="sensor_temp">[[sensor1_temp]] <font size="100%">°C</font></td>
+<td class="sensor_temp">[[sensor2_temp]] <font size="100%">°C</font></td>
+<td class="sensor_temp">[[sensor3_temp]] <font size="100%">°C</font></td>
+<td class="sensor_temp">[[sensor4_temp]] <font size="100%">°C</font></td>
+<td class="sensor_temp">[[sensor5_temp]] <font size="100%">°C</font></td>
+</tr>
+<tr>
+<td class="sensor_hum">[[sensor1_hum]] <font size="100%">%</font></td>
+<td class="sensor_hum">[[sensor2_hum]] <font size="100%">%</font></td>
+<td class="sensor_hum">[[sensor3_hum]] <font size="100%">%</font></td>
+<td class="sensor_hum">[[sensor4_hum]] <font size="100%">%</font></td>
+<td class="sensor_hum">[[sensor5_hum]] <font size="100%">%</font></td>
+</tr>
+<tr>
+<td class="sensor_hum"> &nbsp; </td>   <!-- Just some spacing -->
+</tr>
+<tr>
+<td class="small">[[sensor1_batt]] v</td>
+<td class="small">[[sensor2_batt]] v</td>
+<td class="small">[[sensor3_batt]] v</td>
+<td class="small">[[sensor4_batt]] v</td>
+<td class="small">[[sensor5_batt]] v</td>
+</tr>
+<tr>
+<td class="small">[[sensor1_update]]</td>
+<td class="small">[[sensor2_update]]</td>
+<td class="small">[[sensor3_update]]</td>
+<td class="small">[[sensor4_update]]</td>
+<td class="small">[[sensor5_update]]</td>
+</tr>
+
+</table>
+
+</body>
+</html>
