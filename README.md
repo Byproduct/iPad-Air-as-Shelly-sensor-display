@@ -1,11 +1,11 @@
 # iPad Air as Shelly sensor display
 
-Displays shelly H&T (humidity & temperature) sensor information on a html page 
+Displays shelly H&T (humidity & temperature) sensor information on a html page  
 (layout made for my 1st gen ipad air)
 
 Requires Python 3.
 
-How to use:
+How to use:  
 Copy this font to the same folder and rename it to "MyriadProRegular.otf"
 
 * https://www.fontpalace.com/font-details/myriadpro-regular/
