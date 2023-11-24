@@ -7,10 +7,10 @@ Requires Python 3.
 
 How to use:
 
-Copy this font to the same folder and rename it to "MyriadProRegular.otf"  
+Font (optional): download this to the same folder and rename it to "MyriadProRegular.otf"  
 * https://www.fontpalace.com/font-details/myriadpro-regular/
 
-Put the contents of this script on a server and set sensors.py to run every 10 minutes or so.  
+Put the contents of this script on a server and set sensors.py to run every 10 minutes or so, for example using crontab.  
 
 Point your tablet's browser to the generated sensors.html file.  
 * The page will automatically refresh every 10 minutes. Can be adjusted in template.html.
