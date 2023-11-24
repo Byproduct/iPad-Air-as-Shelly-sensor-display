@@ -38,7 +38,7 @@ def fetch_data(sensor_id):
     humidity = device_data['data']['device_status']['hum']['value']
 
     battery_voltage = device_data['data']['device_status']['bat']['voltage']
-#    battery_percent = device_data['data']['device_status']['bat']['value']              # battery in %, but it seems to constantly show 100 for now. Checking again after a full battery cycle, which will take about a year.
+#    battery_percent = device_data['data']['device_status']['bat']['value']              # battery in %, but the API constantly shows 100. Can be uncommented if they fix it.
 
     sensor_info = {
         "last_updated": str(last_updated),
